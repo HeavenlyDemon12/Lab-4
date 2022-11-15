@@ -1,0 +1,24 @@
+import random
+game = ['stone','paper','scissor']
+i=0
+j=0
+k=0
+while True:
+    a=input('Enter according to your choice: The choices are: stone, paper, scissor or quit ')
+    b=random.choice(game)
+    if a!='q':
+        print('The computer choice is: '+str(b))
+        if ((a=='stone') and (b=='scissor')) or ((a=='paper') and (b=='stone')) or ((a=='scisor') and (b=='stone'))  :
+            print('You win!')
+            i=i+1
+        elif a==b:
+            print('Draw')
+            k=k+1
+        else:
+            print("Player loses!!")
+            j=j+1
+    else:
+        break
+print('Number of wins='+str(i))
+print('Number of loses='+str(j))
+print('Number of draw='+str(k))
